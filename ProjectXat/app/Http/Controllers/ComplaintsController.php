@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Complaint;
 
 class ComplaintsController extends Controller
 {
@@ -21,19 +22,11 @@ class ComplaintsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    protected function create(array $data)
+    public function create()
     {
-        return User::create([
-            'street' => $data['street'],
-            'city' => $data['city'],
-            'title'=> $data['title'],
-            'postal_code' => $data['postal_code'],
-            'description' => $data['description'],
-        ]);
-
         return view('complaints');
-
     }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -42,7 +35,18 @@ class ComplaintsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $a = new Complaint();
+        $a->street = $request->input('street');
+        $a->city = $request->input('city');
+        $a->title = $request->input('title');
+        $a->postal_code = $request->input('postal_code');
+        $a->description = $request->input('description');
+        $a->id = 1;
+        //Auth::user()->id;
+        $a->imagen = "hgtf";
+        $a->save();
+        
+        return redirect('complaints/create');
     }
 
     /**
@@ -64,7 +68,7 @@ class ComplaintsController extends Controller
      */
     public function edit($id)
     {
-        //
+    
     }
 
     /**
