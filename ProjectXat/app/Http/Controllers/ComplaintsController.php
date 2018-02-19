@@ -14,7 +14,7 @@ class ComplaintsController extends Controller
      */
     public function index()
     {
-        return view('complaints');
+        return view('myComplaints');
     }
 
     /**
