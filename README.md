@@ -2,7 +2,7 @@
 
 ## LINKS DE INTERES:
 
-*breadcrumb --> https://v4-alpha.getbootstrap.com/components/breadcrumb/
+* breadcrumb --> https://v4-alpha.getbootstrap.com/components/breadcrumb/
 
 * Ejemplo login --> http://www.cristalab.com/tutoriales/crear-un-login-con-laravel-c112460l/
 * Explicación Breadcrumbs --> https://es.wikipedia.org/wiki/Miga_de_pan_(inform%C3%A1tica)
